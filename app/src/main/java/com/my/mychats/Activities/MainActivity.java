@@ -1,4 +1,4 @@
-package com.my.mychats;
+package com.my.mychats.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.my.mychats.R;
 
 public class MainActivity extends AppCompatActivity {
 

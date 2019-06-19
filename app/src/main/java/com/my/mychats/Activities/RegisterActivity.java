@@ -1,4 +1,4 @@
-package com.my.mychats;
+package com.my.mychats.Activities;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -18,6 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.my.mychats.R;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
 
@@ -75,6 +76,8 @@ public class RegisterActivity extends AppCompatActivity {
                             hashMap.put("id", userId);
                             hashMap.put("username", username);
                             hashMap.put("imageURL", "default");
+                            hashMap.put("name","First name:");
+                            hashMap.put("lastname", "Last name:");
                             mReference.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {

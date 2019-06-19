@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ChatActivity">
+    tools:context=".Activities.ChatActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/bar_layout"
@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:popupTheme="@style/MenuStyle">>
+            app:popupTheme="@style/MenuStyle">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="30dp"
@@ -34,6 +34,7 @@
 
         </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
+
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -54,6 +55,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/text_send"
+            android:layout_toRightOf="@+id/btn_loadPicture"
             android:layout_toLeftOf="@id/btn_send"
             android:layout_centerVertical="true"
             android:background="@color/cardview_light_background"
@@ -66,6 +68,14 @@
             android:layout_alignParentEnd="true"
             android:background="@mipmap/send_icon"
             android:layout_alignParentRight="true"/>
+
+        <ImageButton
+            android:id="@+id/btn_loadPicture"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="0dp"
+            android:background="@mipmap/send_picture_final" />
+
     </RelativeLayout>
 
 </RelativeLayout>

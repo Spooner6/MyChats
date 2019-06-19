@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#1C81DA</color>
-    <color name="colorPrimaryDark">#E6A58B</color>
-    <color name="colorAccent">#E6A58B</color>
+    <color name="colorPrimaryDark">#1C81DA</color>
+    <color name="colorAccent">#FFFFFF</color>
     <color name="colorWords">#001E00</color>
-    <color name="selectWords">#557ADA</color>
+    <color name="selectWords">#000000</color>
+    <color name="buttonRed">#FF0000</color>
+    <color name="userProfileTop">#91BDF0</color>
+
 </resources>

@@ -6,20 +6,40 @@
     android:padding="10dp">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:id="@+id/profile_image"
         android:src="@mipmap/ic_launcher"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="username"
+        android:text="Username"
         android:id="@+id/username"
         android:layout_toRightOf="@+id/profile_image"
         android:layout_toEndOf="@+id/profile_image"
         android:layout_marginLeft="10dp"
-        android:layout_centerVertical="true"
-        android:textSize="18sp"/>
+        android:padding="6dp"
+        android:textSize="20sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/status"
+        android:text="Status:"
+        android:textSize="14sp"
+        android:layout_toRightOf="@+id/profile_image"
+        android:layout_toEndOf="@+id/profile_image"
+        android:layout_marginLeft="16dp"
+        android:layout_below="@+id/username"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/statusData"
+        android:text="unknown"
+        android:textSize="14sp"
+        android:layout_toRightOf="@+id/status"
+        android:layout_toEndOf="@+id/status"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/username"/>
 
 </RelativeLayout>

@@ -1,17 +1,45 @@
 package com.my.mychats.Model;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     private String id;
     private String username;
     private String imageURL;
+    private String name;
+    private String lastname;
+
+    public User(String id, String username, String imageURL, String jmeno, String prijmeni) {
+        this.id = id;
+        this.username = username;
+        this.imageURL = imageURL;
+        this.name = jmeno;
+        this.lastname = prijmeni;
+    }
+
+    public User() {
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
 
     public User(String id, String username, String imageURL) {
         this.id = id;
         this.username = username;
         this.imageURL = imageURL;
-    }
-
-    public User() {
     }
 
     public String getId() {

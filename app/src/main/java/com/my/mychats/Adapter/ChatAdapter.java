@@ -1,7 +1,6 @@
 package com.my.mychats.Adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -13,9 +12,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.my.mychats.ChatActivity;
 import com.my.mychats.Model.Chat;
-import com.my.mychats.Model.User;
 import com.my.mychats.R;
 
 import java.util.List;
@@ -50,13 +47,19 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ChatAdapter.ViewHolder holder, int position) {
         Chat chat = mChat.get(position);
-        holder.showMessage.setText(chat.getMessage());
-       /* if(imageUrl.equals("default")){
-            holder.profileImage.setImageResource(R.mipmap.ic_launcher);
+
+        if(chat.getType().equals("text")){
+            holder.showMessage.setText(chat.getMessage());
+
+        }else
+            Glide.with(mContext).load(chat.getMessage()).into(holder.sendImage);
+        //System.out.println(mContext);
+
+        if(imageUrl.equals("default")){
+           holder.profileImage.setImageResource(R.mipmap.ic_launcher);
         }else {
             Glide.with(mContext).load(imageUrl).into(holder.profileImage);
         }
-        */
     }
 
     @Override
@@ -68,13 +71,14 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
 
         public TextView showMessage;
         public ImageView profileImage;
+        public ImageView sendImage;
 
 
         public ViewHolder(View itemView) {
             super(itemView);
-
             showMessage = itemView.findViewById(R.id.showMessage);
-            profileImage = itemView.findViewById(R.id.profilImage);
+            profileImage = itemView.findViewById(R.id.profile_image);
+            sendImage = itemView.findViewById(R.id.showimage);
         }
     }
 

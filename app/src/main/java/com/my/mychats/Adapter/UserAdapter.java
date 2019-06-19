@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.my.mychats.ChatActivity;
+import com.my.mychats.Activities.ChatActivity;
 import com.my.mychats.Model.User;
 import com.my.mychats.R;
 
@@ -37,9 +37,11 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
         final User user = mUsers.get(position);
+
         holder.username.setText(user.getUsername());
         if(user.getImageURL().equals("default")){
-          //  holder.profileImage.setImageResource(R.mipmap.ic_launcher);
+
+            holder.profileImage.setImageResource(R.mipmap.ic_launcher);
 
         }else {
             Glide.with(mContext).load(user.getImageURL()).into(holder.profileImage);
@@ -69,7 +71,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
             super(itemView);
 
             username = itemView.findViewById(R.id.username);
-            profileImage = itemView.findViewById(R.id.profilImage);
+            profileImage = itemView.findViewById(R.id.profile_image);
         }
     }
 }
